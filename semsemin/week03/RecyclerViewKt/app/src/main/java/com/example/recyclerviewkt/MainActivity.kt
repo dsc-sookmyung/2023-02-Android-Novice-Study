@@ -17,19 +17,7 @@ import com.example.recyclerviewkt.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
-   /* private val profileList: ArrayList<profiles> = arrayListOf<profiles>().apply {
-        profiles(R.drawable.man,"홍드로이드",22,"안드로이드 앱 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"아이폰 앱 개발자"),
-        profiles(R.drawable.man,"홍드로이드",22,"리액트 웹 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"플러터 앱 개발자"),
-        profiles(R.drawable.man,"홍드로이드",22,"유니티 앱 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"알고리즘 앱 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"웹 앱 개발자"),
-        profiles(R.drawable.man,"홍드로이드",22,"하이브리드 웹 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"그냥 앱 개발자"),
-        profiles(R.drawable.woman,"홍드로이드",22,"배고픈 앱 개발자"),
-        profiles(R.drawable.man,"홍드로이드",22,"졸린 앱 개발자")
-    }*/
+
     private val rvAdapter = ProfileAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             ): Boolean {
                 val fromPos: Int =
                     viewHolder.bindingAdapterPosition //바뀌는 포지션이라 bindingAdapterPosition
-                val toPos: Int = viewHolder.bindingAdapterPosition // 더이상 adapterPosition 사용안함.
+                val toPos: Int = target.bindingAdapterPosition // 더이상 adapterPosition 사용안함.
                 rvAdapter.swapData(fromPos, toPos)
                 return true
 
